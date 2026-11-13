@@ -1,0 +1,1174 @@
+/* ==========================================
+   MANAGER LEAVE MANAGEMENT
+========================================== */
+
+.mlm-page {
+  min-width: 0;
+  color: #1f2937;
+  padding-bottom: 28px;
+}
+
+/* Overview banner */
+
+.mlm-overview {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 24px;
+  margin-top: 24px;
+  background: linear-gradient(120deg, #eff6ff, #ffffff);
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+}
+
+.mlm-overview-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #1d4ed8;
+  background: #dbeafe;
+  border: 1px solid #bfdbfe;
+  border-radius: 14px;
+  font-size: 25px;
+}
+
+.mlm-overview h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mlm-overview p {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Success and error messages */
+
+.mlm-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  margin-top: 20px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.mlm-alert > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mlm-alert p {
+  flex: 1;
+  margin: 2px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.mlm-alert > button {
+  padding: 0 4px;
+  color: inherit;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.mlm-alert-success {
+  color: #166534;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.mlm-alert-success > span {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.mlm-alert-error {
+  color: #991b1b;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.mlm-alert-error > span {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+/* Main content */
+
+.mlm-content-card {
+  min-width: 0;
+  margin-top: 24px;
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 4%);
+  overflow: hidden;
+}
+
+/* Tabs */
+
+.mlm-tabs {
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+  padding: 12px 18px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5eaf1;
+  overflow-x: auto;
+}
+
+.mlm-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex-shrink: 0;
+  min-height: 52px;
+  padding: 0 18px;
+  color: #64748b;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.mlm-tab > span:first-child {
+  font-size: 17px;
+}
+
+.mlm-tab:hover {
+  color: #1d4ed8;
+  background: #f8fbff;
+}
+
+.mlm-tab-active {
+  color: #1d4ed8;
+  background: #f8fbff;
+  border-bottom-color: #2563eb;
+}
+
+.mlm-tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 21px;
+  height: 21px;
+  padding: 0 5px;
+  color: #1d4ed8;
+  background: #dbeafe;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.mlm-tab-panel {
+  min-width: 0;
+  padding: 26px;
+}
+
+/* Section headings */
+
+.mlm-section-heading,
+.mlm-subsection-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mlm-section-heading {
+  margin-bottom: 24px;
+}
+
+.mlm-section-heading h2,
+.mlm-subsection-heading h3 {
+  margin: 0;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.mlm-section-heading h2 {
+  font-size: 21px;
+}
+
+.mlm-subsection-heading h3 {
+  font-size: 17px;
+}
+
+.mlm-section-heading p,
+.mlm-subsection-heading p {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.mlm-count-badge {
+  flex-shrink: 0;
+  padding: 9px 13px;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Summary cards */
+
+.mlm-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.mlm-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e5eaf1;
+  border-radius: 12px;
+}
+
+.mlm-stat-card > span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.mlm-stat-card > strong {
+  color: #1e293b;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.mlm-stat-pending {
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.mlm-stat-approved {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.mlm-stat-rejected {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+/* Filters */
+
+.mlm-filter-panel {
+  display: grid;
+  grid-template-columns: minmax(220px, 2fr) repeat(4, minmax(120px, 1fr));
+  gap: 15px;
+  align-items: end;
+  padding: 18px;
+  margin-bottom: 22px;
+  background: #f8fafc;
+  border: 1px solid #e5eaf1;
+  border-radius: 12px;
+}
+
+.mlm-filter-search,
+.mlm-filter-field,
+.mlm-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.mlm-filter-search label,
+.mlm-filter-field label,
+.mlm-form-field label {
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mlm-filter-search input,
+.mlm-filter-field input,
+.mlm-filter-field select,
+.mlm-form-field input,
+.mlm-form-field select,
+.mlm-form-field textarea,
+.mlm-history-status-filter {
+  width: 100%;
+  min-width: 0;
+  min-height: 43px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  color: #1f2937;
+  background: #ffffff;
+  border: 1px solid #dbe3ed;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  font-size: 12px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.mlm-form-field textarea {
+  min-height: 105px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.mlm-filter-search input::placeholder,
+.mlm-form-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+.mlm-filter-search input:focus,
+.mlm-filter-field input:focus,
+.mlm-filter-field select:focus,
+.mlm-form-field input:focus,
+.mlm-form-field select:focus,
+.mlm-form-field textarea:focus,
+.mlm-history-status-filter:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 12%);
+}
+
+.mlm-clear-button {
+  min-height: 43px;
+  padding: 0 13px;
+  color: #475569;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.mlm-clear-button:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+/* Tables */
+
+.mlm-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e5eaf1;
+  border-radius: 11px;
+}
+
+.mlm-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 12px;
+}
+
+.mlm-table thead {
+  background: #f4f7fb;
+}
+
+.mlm-table th {
+  padding: 15px;
+  color: #64748b;
+  border-bottom: 1px solid #e5eaf1;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.mlm-table td {
+  padding: 15px;
+  color: #475569;
+  border-bottom: 1px solid #edf1f6;
+  vertical-align: middle;
+}
+
+.mlm-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.mlm-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.mlm-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.mlm-employee-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.mlm-avatar {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #1d4ed8;
+  background: #dbeafe;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mlm-employee-cell > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.mlm-employee-cell strong {
+  color: #26364d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mlm-employee-cell > div:last-child > span {
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.mlm-leave-type {
+  display: inline-flex;
+  padding: 6px 8px;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.mlm-reason-cell {
+  display: block;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Status badges */
+
+.mlm-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 9px;
+  border: 1px solid;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.mlm-status-pending {
+  color: #92400e;
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.mlm-status-approved {
+  color: #166534;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.mlm-status-rejected {
+  color: #991b1b;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.mlm-status-default {
+  color: #475569;
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+/* Action buttons */
+
+.mlm-action-group {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.mlm-approve-button,
+.mlm-reject-button,
+.mlm-primary-button,
+.mlm-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.mlm-approve-button {
+  color: #166534;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.mlm-approve-button:hover:not(:disabled) {
+  background: #dcfce7;
+  border-color: #86efac;
+}
+
+.mlm-reject-button {
+  color: #b91c1c;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.mlm-reject-button:hover:not(:disabled) {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+.mlm-primary-button {
+  min-height: 43px;
+  padding: 0 18px;
+  color: #ffffff;
+  background: #2563eb;
+  border-color: #2563eb;
+  font-size: 12px;
+}
+
+.mlm-primary-button:hover:not(:disabled) {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  box-shadow: 0 3px 8px rgb(37 99 235 / 15%);
+}
+
+.mlm-secondary-button {
+  color: #475569;
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.mlm-secondary-button:hover:not(:disabled) {
+  background: #f1f5f9;
+}
+
+.mlm-approve-button:disabled,
+.mlm-reject-button:disabled,
+.mlm-primary-button:disabled,
+.mlm-secondary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Subsections */
+
+.mlm-subsection {
+  padding: 22px;
+  margin-top: 22px;
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 12px;
+}
+
+.mlm-subsection:first-of-type {
+  margin-top: 0;
+}
+
+.mlm-subsection-heading {
+  margin-bottom: 20px;
+}
+
+/* Leave balance cards */
+
+.mlm-balance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.mlm-balance-card {
+  min-width: 0;
+  padding: 20px;
+  background: #f8fbff;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+}
+
+.mlm-balance-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mlm-balance-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  background: #dbeafe;
+  border-radius: 9px;
+  font-size: 17px;
+}
+
+.mlm-balance-remaining {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.mlm-balance-remaining strong {
+  color: #1e3a8a;
+  font-size: 31px;
+  font-weight: 800;
+}
+
+.mlm-balance-remaining > span {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.mlm-balance-progress {
+  height: 7px;
+  margin-top: 17px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.mlm-balance-progress > div {
+  height: 100%;
+  background: #3b82f6;
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+
+.mlm-balance-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 13px;
+  color: #64748b;
+  font-size: 10px;
+}
+
+/* Leave application form */
+
+.mlm-leave-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.mlm-form-full {
+  grid-column: 1 / -1;
+}
+
+.mlm-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  grid-column: 1 / -1;
+  padding-top: 4px;
+}
+
+.mlm-form-footer > span {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.mlm-approver-note {
+  padding: 12px 14px;
+  margin: 18px 0 0;
+  color: #475569;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.mlm-history-status-filter {
+  width: auto;
+  min-width: 145px;
+}
+
+/* Loading and empty states */
+
+.mlm-state,
+.mlm-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 230px;
+  padding: 28px 20px;
+  text-align: center;
+  background: #f8fafc;
+  border: 1px dashed #dbe3ed;
+  border-radius: 12px;
+}
+
+.mlm-state h3,
+.mlm-empty-state h3 {
+  margin: 13px 0 0;
+  color: #26364d;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.mlm-state p,
+.mlm-empty-state p {
+  max-width: 450px;
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.mlm-empty-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  background: #dbeafe;
+  border-radius: 15px;
+  font-size: 24px;
+}
+
+.mlm-spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid #dbeafe;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: mlm-spin 0.8s linear infinite;
+}
+
+@keyframes mlm-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mlm-error-state {
+  background: #fffafa;
+  border-color: #fecaca;
+}
+
+.mlm-error-state h3 {
+  color: #b91c1c;
+}
+
+.mlm-error-state .mlm-secondary-button {
+  margin-top: 18px;
+}
+
+/* Approval / rejection modal */
+
+.mlm-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(15 23 42 / 55%);
+  overflow-y: auto;
+}
+
+.mlm-modal {
+  width: 100%;
+  max-width: 490px;
+  padding: 27px;
+  margin: auto;
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgb(15 23 42 / 20%);
+}
+
+.mlm-modal-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mlm-modal-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #166534;
+  background: #dcfce7;
+  border-radius: 13px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.mlm-modal-icon-danger {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.mlm-modal-close {
+  width: 34px;
+  height: 34px;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.mlm-modal-close:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mlm-modal h2 {
+  margin: 20px 0 0;
+  color: #1e293b;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.mlm-modal-description {
+  margin: 12px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.mlm-modal-description strong {
+  color: #334155;
+}
+
+.mlm-modal-reason {
+  margin-top: 22px;
+}
+
+.mlm-modal-error {
+  padding: 11px 12px;
+  margin: 15px 0 0;
+  color: #991b1b;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.mlm-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 1200px) {
+  .mlm-filter-panel {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .mlm-filter-search {
+    grid-column: span 2;
+  }
+
+  .mlm-clear-button {
+    align-self: end;
+  }
+}
+
+@media (max-width: 900px) {
+  .mlm-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mlm-balance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mlm-leave-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mlm-table {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 650px) {
+  .mlm-overview {
+    align-items: flex-start;
+    padding: 18px;
+  }
+
+  .mlm-overview-icon {
+    width: 43px;
+    height: 43px;
+    font-size: 20px;
+  }
+
+  .mlm-tabs {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .mlm-tab {
+    min-height: 48px;
+    padding: 0 13px;
+    font-size: 12px;
+  }
+
+  .mlm-tab-panel {
+    padding: 17px;
+  }
+
+  .mlm-section-heading,
+  .mlm-subsection-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mlm-count-badge {
+    align-self: flex-start;
+  }
+
+  .mlm-filter-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .mlm-filter-search {
+    grid-column: auto;
+  }
+
+  .mlm-stat-grid {
+    gap: 10px;
+  }
+
+  .mlm-stat-card {
+    padding: 15px;
+  }
+
+  .mlm-stat-card > strong {
+    font-size: 23px;
+  }
+
+  .mlm-subsection {
+    padding: 16px;
+  }
+
+  .mlm-leave-form {
+    grid-template-columns: 1fr;
+  }
+
+  .mlm-form-full,
+  .mlm-form-footer {
+    grid-column: auto;
+  }
+
+  .mlm-form-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mlm-history-status-filter {
+    width: 100%;
+  }
+
+  .mlm-modal {
+    padding: 20px;
+  }
+
+  .mlm-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .mlm-modal-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .mlm-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mlm-balance-card {
+    padding: 16px;
+  }
+}
+
+/* Leave decision details */
+.mlm-decision-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 130px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.mlm-decision-details span {
+  display: block;
+}
+
+/* View Leave Details Button */
+.mlm-view-details-button {
+  padding: 7px 11px;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.mlm-view-details-button:hover {
+  background: #dbeafe;
+}
+
+/* Leave Details Modal */
+.mlm-leave-details-modal {
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.mlm-leave-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.mlm-leave-detail-item {
+  min-width: 0;
+  padding: 13px;
+  background: #f8fafc;
+  border: 1px solid #e5eaf1;
+  border-radius: 9px;
+}
+
+.mlm-leave-detail-item > span {
+  display: block;
+  margin-bottom: 7px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.mlm-leave-detail-item > strong {
+  display: block;
+  color: #1e293b;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.mlm-leave-detail-item > p {
+  margin: 0;
+  color: #334155;
+  font-size: 13px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.mlm-leave-detail-full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 500px) {
+  .mlm-leave-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mlm-leave-detail-full {
+    grid-column: auto;
+  }
+}

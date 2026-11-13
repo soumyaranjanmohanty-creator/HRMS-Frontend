@@ -1,0 +1,363 @@
+/* ==========================================
+   EMPLOYEE PROFILE PAGE
+========================================== */
+
+.employee-profile-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 30px 32px 48px;
+  box-sizing: border-box;
+  background: #f3f6fb;
+  color: #17365f;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.employee-profile-page * {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.employee-profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.employee-profile-eyebrow {
+  margin: 0 0 7px;
+  color: #2374ed;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.employee-profile-header h1 {
+  margin: 0 0 8px;
+  color: #12345c;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.employee-profile-subtitle {
+  max-width: 700px;
+  margin: 0;
+  color: #687b98;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.employee-profile-role-badge {
+  flex-shrink: 0;
+  margin-top: 1px;
+  padding: 9px 17px;
+  border: 1px solid #d2e4ff;
+  border-radius: 24px;
+  background: #edf5ff;
+  color: #1769d2;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ==========================================
+   PROFILE CARDS
+========================================== */
+
+.employee-profile-card {
+  width: 100%;
+  margin-bottom: 21px;
+  padding: 24px 23px;
+  border: 1px solid #e0e8f2;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 5px 16px rgba(30, 60, 100, 0.045);
+}
+
+.employee-profile-section-heading {
+  margin-bottom: 22px;
+}
+
+.employee-profile-section-heading h2 {
+  margin: 0 0 6px;
+  color: #173b68;
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.employee-profile-section-heading p {
+  margin: 0;
+  color: #71819b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   TWO-COLUMN FORM GRID
+========================================== */
+
+.employee-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 18px;
+  row-gap: 18px;
+}
+
+.employee-profile-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.employee-profile-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #18375f;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.employee-profile-full-width {
+  grid-column: 1 / -1;
+}
+
+/* ==========================================
+   READ-ONLY FIELDS
+   These fields show a lock icon.
+========================================== */
+
+.employee-profile-locked-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  overflow-wrap: anywhere;
+  border: 1px solid #e0e8f2;
+  border-radius: 7px;
+  background: #f7f9fc;
+  color: #526782;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.employee-profile-lock {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+/* ==========================================
+   EDITABLE INPUTS
+   Editable fields do not show a lock icon.
+========================================== */
+
+.employee-profile-input,
+.employee-profile-textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #d8e2f0;
+  border-radius: 7px;
+  outline: none;
+  background: #ffffff;
+  color: #243f62;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  line-height: 1.5;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.employee-profile-input {
+  height: 42px;
+  padding: 10px 12px;
+}
+
+.employee-profile-textarea {
+  min-height: 80px;
+  padding: 11px 12px;
+  resize: vertical;
+}
+
+.employee-profile-input:focus,
+.employee-profile-textarea:focus {
+  border-color: #438bff;
+  box-shadow: 0 0 0 3px rgba(52, 126, 245, 0.1);
+}
+
+.employee-profile-input:disabled,
+.employee-profile-textarea:disabled {
+  cursor: not-allowed;
+  background: #f7f9fc;
+}
+
+/* ==========================================
+   SAVE BUTTONS
+========================================== */
+
+.employee-profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
+.employee-profile-save-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 7px;
+  background: #2176e8;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.employee-profile-save-button:hover:not(:disabled) {
+  background: #155fc5;
+  transform: translateY(-1px);
+}
+
+.employee-profile-save-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   FEEDBACK MESSAGES
+========================================== */
+
+.employee-profile-alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 13px 15px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.employee-profile-alert button {
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.employee-profile-error {
+  border-color: #fecaca;
+  background: #fff1f2;
+  color: #b42318;
+}
+
+.employee-profile-error button {
+  color: #b42318;
+}
+
+.employee-profile-success {
+  border-color: #b7ebcf;
+  background: #edfff5;
+  color: #087443;
+}
+
+.employee-profile-success button {
+  color: #087443;
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.employee-profile-loading {
+  padding: 60px 20px;
+  text-align: center;
+  color: #627894;
+  font-size: 14px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 900px) {
+  .employee-profile-page {
+    padding: 24px 20px 36px;
+  }
+
+  .employee-profile-header h1 {
+    font-size: 27px;
+  }
+
+  .employee-profile-card {
+    padding: 21px 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .employee-profile-page {
+    padding: 20px 13px 30px;
+  }
+
+  .employee-profile-header {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .employee-profile-header h1 {
+    font-size: 25px;
+  }
+
+  .employee-profile-grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 16px;
+  }
+
+  .employee-profile-full-width {
+    grid-column: auto;
+  }
+
+  .employee-profile-card {
+    padding: 19px 15px;
+    margin-bottom: 16px;
+  }
+
+  .employee-profile-section-heading h2 {
+    font-size: 16px;
+  }
+
+  .employee-profile-actions {
+    justify-content: stretch;
+  }
+
+  .employee-profile-save-button {
+    width: 100%;
+  }
+}

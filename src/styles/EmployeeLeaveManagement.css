@@ -1,0 +1,1014 @@
+/* =====================================================
+   EMPLOYEE LEAVE MANAGEMENT
+   ===================================================== */
+
+.employee-leave-page {
+  width: 100%;
+  min-width: 0;
+  padding: 26px 30px;
+  background: #f4f7fc;
+  color: #172b4d;
+  font-family: Georgia, "Times New Roman", serif;
+  box-sizing: border-box;
+}
+
+.employee-leave-page *,
+.employee-leave-page *::before,
+.employee-leave-page *::after {
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+.employee-leave-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.employee-leave-eyebrow {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.employee-leave-header h1 {
+  margin: 0;
+  color: #172b4d;
+  font-size: clamp(25px, 2.2vw, 33px);
+  font-weight: 800;
+}
+
+.employee-leave-subtitle {
+  margin: 9px 0 0;
+  color: #74839b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.employee-leave-refresh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid #cfe0ff;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #2563eb;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.employee-leave-refresh:hover {
+  background: #eff6ff;
+}
+
+.employee-leave-refresh:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ALERTS */
+
+.employee-leave-alert {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+  padding: 14px 17px;
+  border-radius: 9px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.employee-leave-alert button {
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.leave-alert-error {
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #b91c1c;
+}
+
+.leave-alert-success {
+  border: 1px solid #a7f3d0;
+  background: #ecfdf5;
+  color: #047857;
+}
+
+/* SUMMARY CARDS */
+
+.employee-leave-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.leave-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  min-height: 105px;
+  padding: 20px;
+  border: 1px solid #e2eaf5;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(30, 64, 110, 0.035);
+}
+
+.leave-summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.leave-summary-icon.icon-blue {
+  background: #eaf2ff;
+  color: #2563eb;
+}
+
+.leave-summary-icon.icon-orange {
+  background: #fff5e8;
+  color: #d97706;
+}
+
+.leave-summary-icon.icon-green {
+  background: #e8faf3;
+  color: #059669;
+}
+
+.leave-summary-icon.icon-red {
+  background: #fff0f0;
+  color: #dc2626;
+}
+
+.leave-summary-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.leave-summary-card span {
+  color: #8190a6;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.leave-summary-card strong {
+  color: #233957;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+/* MAIN CONTENT */
+
+.employee-leave-content {
+  overflow: hidden;
+  border: 1px solid #e2eaf5;
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(30, 64, 110, 0.035);
+}
+
+/* TABS */
+
+.employee-leave-tabs {
+  display: flex;
+  align-items: stretch;
+  gap: 5px;
+  padding: 12px 18px 0;
+  border-bottom: 1px solid #e5ebf4;
+  background: #ffffff;
+}
+
+.employee-leave-tabs button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 52px;
+  padding: 0 20px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: #74839b;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.employee-leave-tabs button span {
+  font-size: 16px;
+}
+
+.employee-leave-tabs button:hover {
+  background: #f8fbff;
+  color: #2563eb;
+}
+
+.employee-leave-tabs button.active {
+  border-bottom-color: #2563eb;
+  color: #2563eb;
+}
+
+/* TAB PANELS */
+
+.employee-leave-tab-panel {
+  min-width: 0;
+  padding: 27px;
+}
+
+.leave-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.leave-section-heading h2 {
+  margin: 0;
+  color: #233957;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.leave-section-heading p {
+  margin: 8px 0 0;
+  color: #8290a6;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.leave-year-badge {
+  padding: 9px 12px;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* STATUS BADGES */
+
+.employee-leave-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.employee-leave-status.status-pending {
+  background: #fff5e8;
+  color: #b7791f;
+}
+
+.employee-leave-status.status-approved {
+  background: #e8faf3;
+  color: #059669;
+}
+
+.employee-leave-status.status-rejected {
+  background: #fff0f0;
+  color: #dc2626;
+}
+
+/* APPLY LEAVE FORM */
+
+.employee-leave-form {
+  width: 100%;
+}
+
+.leave-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 23px 22px;
+}
+
+.leave-form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 9px;
+}
+
+.leave-form-group label {
+  color: #344762;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.leave-form-group input,
+.leave-form-group select,
+.leave-form-group textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #253957;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.leave-form-group input,
+.leave-form-group select {
+  min-height: 44px;
+}
+
+.leave-form-group textarea {
+  min-height: 125px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.leave-form-group input:focus,
+.leave-form-group select:focus,
+.leave-form-group textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.09);
+}
+
+.leave-form-group input[readonly] {
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.leave-form-group small {
+  color: #94a3b8;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.leave-form-full {
+  grid-column: 1 / -1;
+}
+
+/* FORM NOTE */
+
+.leave-form-note {
+  margin-top: 26px;
+  padding: 16px 18px;
+  border: 1px solid #dbeafe;
+  border-radius: 9px;
+  background: #f4f8ff;
+}
+
+.leave-form-note strong {
+  color: #254b8b;
+  font-size: 12px;
+}
+
+.leave-form-note p {
+  margin: 8px 0 0;
+  color: #6c7c95;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* FORM BUTTONS */
+
+.leave-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.leave-reset-button,
+.leave-submit-button,
+.leave-empty-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 17px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.leave-reset-button {
+  border-color: #dbe3ef;
+  background: #ffffff;
+  color: #64748b;
+}
+
+.leave-reset-button:hover {
+  border-color: #94a3b8;
+  background: #f8fafc;
+}
+
+.leave-submit-button,
+.leave-empty-action {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.leave-submit-button:hover,
+.leave-empty-action:hover {
+  background: #1d4ed8;
+}
+
+.leave-reset-button:disabled,
+.leave-submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* HISTORY FILTERS */
+
+.leave-history-filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 18px;
+  border: 1px solid #e5ebf4;
+  border-radius: 10px;
+  background: #f8faff;
+}
+
+.leave-history-filters > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.leave-history-filters label {
+  color: #52647e;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.leave-history-filters input,
+.leave-history-filters select {
+  min-width: 170px;
+  min-height: 40px;
+  padding: 9px 11px;
+  border: 1px solid #dbe3ef;
+  border-radius: 7px;
+  outline: none;
+  background: #ffffff;
+  color: #344762;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+.leave-history-filters input:focus,
+.leave-history-filters select:focus {
+  border-color: #60a5fa;
+}
+
+.leave-history-filters .leave-reset-button {
+  flex-shrink: 0;
+  min-height: 40px;
+}
+
+/* HISTORY RESULT */
+
+.leave-history-result {
+  margin: 0 0 13px;
+  color: #8290a6;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+/* TABLE */
+
+.leave-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e5ebf4;
+  border-radius: 9px;
+}
+
+.employee-leave-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  text-align: left;
+}
+
+.employee-leave-table thead {
+  background: #f4f7fc;
+}
+
+.employee-leave-table th {
+  padding: 15px 14px;
+  border-bottom: 1px solid #e5ebf4;
+  color: #64748b;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.employee-leave-table td {
+  padding: 15px 14px;
+  border-bottom: 1px solid #edf1f7;
+  color: #40536f;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.employee-leave-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.employee-leave-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.leave-type-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.leave-history-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 17px;
+  color: #8290a6;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+.leave-history-footer button {
+  padding: 8px 12px;
+  border: 1px solid #dbeafe;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* EMPTY STATE */
+
+.leave-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 230px;
+  padding: 30px;
+  border: 1px dashed #dbe3ef;
+  border-radius: 10px;
+  background: #fbfcff;
+  text-align: center;
+}
+
+.leave-empty-state > span {
+  margin-bottom: 12px;
+  color: #2563eb;
+  font-size: 30px;
+}
+
+.leave-empty-state h3 {
+  margin: 0;
+  color: #344762;
+  font-size: 17px;
+}
+
+.leave-empty-state p {
+  max-width: 420px;
+  margin: 10px 0 18px;
+  color: #8290a6;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* LEAVE BALANCE OVERVIEW */
+
+.leave-balance-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-bottom: 26px;
+}
+
+.leave-balance-overview > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 21px;
+  border: 1px solid #e2eaf5;
+  border-radius: 11px;
+  background: #f8faff;
+}
+
+.leave-balance-overview span {
+  color: #8290a6;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.leave-balance-overview strong {
+  color: #233957;
+  font-size: 29px;
+  font-weight: 800;
+}
+
+.leave-balance-overview small {
+  color: #94a3b8;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+}
+
+/* INDIVIDUAL BALANCE CARDS */
+
+.leave-balance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.leave-balance-card {
+  min-width: 0;
+  padding: 21px;
+  border: 1px solid #e2eaf5;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(30, 64, 110, 0.025);
+}
+
+.leave-balance-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.leave-balance-card-header > div > span {
+  color: #8290a6;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+}
+
+.leave-balance-card h3 {
+  margin: 8px 0 0;
+  color: #253957;
+  font-size: 16px;
+}
+
+.leave-balance-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 20px;
+}
+
+.balance-earned .leave-balance-icon {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.balance-sick .leave-balance-icon {
+  background: #fff5e8;
+  color: #d97706;
+}
+
+.balance-casual .leave-balance-icon {
+  background: #e8faf3;
+  color: #059669;
+}
+
+.leave-balance-number {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin: 25px 0 17px;
+}
+
+.leave-balance-number strong {
+  color: #233957;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.leave-balance-number span {
+  color: #8290a6;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+}
+
+.leave-balance-progress {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #edf1f7;
+}
+
+.leave-balance-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.balance-sick .leave-balance-progress-fill {
+  background: #d97706;
+}
+
+.balance-casual .leave-balance-progress-fill {
+  background: #059669;
+}
+
+.leave-balance-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 14px;
+  color: #8290a6;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+}
+
+.leave-balance-details strong {
+  color: #40536f;
+}
+
+/* BALANCE NOTE */
+
+.leave-balance-note {
+  margin-top: 25px;
+  padding: 17px 19px;
+  border: 1px solid #dbeafe;
+  border-radius: 9px;
+  background: #f4f8ff;
+}
+
+.leave-balance-note strong {
+  color: #254b8b;
+  font-size: 12px;
+}
+
+.leave-balance-note p {
+  margin: 8px 0 0;
+  color: #6c7c95;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.leave-balance-refresh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  margin-top: 20px;
+  padding: 0 15px;
+  border: 1px solid #cfe0ff;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #2563eb;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.leave-balance-refresh:hover {
+  background: #eff6ff;
+}
+
+.leave-balance-refresh:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .employee-leave-page {
+    padding: 23px 20px;
+  }
+
+  .employee-leave-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leave-balance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leave-history-filters {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 750px) {
+  .employee-leave-tab-panel {
+    padding: 20px;
+  }
+
+  .employee-leave-tabs {
+    gap: 0;
+    padding: 8px 8px 0;
+  }
+
+  .employee-leave-tabs button {
+    flex: 1;
+    gap: 5px;
+    padding: 0 8px;
+    font-size: 10px;
+  }
+
+  .leave-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .leave-form-full {
+    grid-column: auto;
+  }
+
+  .leave-balance-overview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .leave-balance-overview > div {
+    padding: 14px;
+  }
+
+  .leave-balance-overview strong {
+    font-size: 24px;
+  }
+
+  .leave-balance-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .employee-leave-page {
+    padding: 17px 12px;
+  }
+
+  .employee-leave-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 17px;
+  }
+
+  .employee-leave-refresh {
+    align-self: flex-start;
+  }
+
+  .employee-leave-summary {
+    gap: 10px;
+  }
+
+  .leave-summary-card {
+    gap: 10px;
+    min-height: 90px;
+    padding: 13px;
+  }
+
+  .leave-summary-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 17px;
+  }
+
+  .leave-summary-card span {
+    font-size: 9px;
+  }
+
+  .leave-summary-card strong {
+    font-size: 22px;
+  }
+
+  .employee-leave-tab-panel {
+    padding: 16px 12px;
+  }
+
+  .leave-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .leave-history-filters {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 13px;
+  }
+
+  .leave-history-filters > div {
+    width: 100%;
+  }
+
+  .leave-history-filters input,
+  .leave-history-filters select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .leave-history-filters .leave-reset-button {
+    align-self: flex-start;
+  }
+
+  .leave-form-actions {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+
+  .leave-form-actions button {
+    width: 100%;
+  }
+
+  .leave-balance-overview {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .leave-balance-overview > div {
+    padding: 17px;
+  }
+
+  .leave-history-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .leave-year-badge {
+    white-space: normal;
+  }
+}

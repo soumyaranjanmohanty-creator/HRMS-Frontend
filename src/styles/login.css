@@ -1,0 +1,356 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f7fb;
+  font-family: Arial, sans-serif;
+}
+
+/* Left Corporate Panel */
+.corporate-panel {
+  width: 50%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(4, 35, 72, 0.72), rgba(4, 35, 72, 0.88)),
+    url("/src/assets/corporate-building.png") center / cover no-repeat;
+}
+
+.corporate-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 60px;
+}
+
+.corporate-content {
+  max-width: 560px;
+  color: #ffffff;
+}
+
+.corporate-logo {
+  width: 220px;
+  height: auto;
+  margin-bottom: 55px;
+  filter: brightness(0) invert(1);
+}
+
+.corporate-content h2 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.corporate-line {
+  width: 70px;
+  height: 4px;
+  margin: 28px 0;
+  background: #2f8cff;
+  border-radius: 4px;
+}
+
+.corporate-content p {
+  max-width: 470px;
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.6;
+  color: #e5edf7;
+}
+
+.corporate-features {
+  display: flex;
+  gap: 45px;
+  margin-top: 60px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-left: 2px solid #2f8cff;
+  padding-left: 15px;
+}
+
+.feature strong {
+  font-size: 17px;
+}
+
+.feature span {
+  font-size: 14px;
+  color: #cbd8e8;
+}
+
+/* Right Login Panel */
+.login-panel {
+  width: 50%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top right, #e5f0ff, transparent 35%), #ffffff;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px 45px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.company-logo {
+  width: 190px;
+  height: auto;
+  margin-bottom: 18px;
+}
+
+.login-card h1 {
+  margin: 0;
+  font-size: 23px;
+  color: #123b6d;
+}
+
+.login-card h2 {
+  margin: 14px 0 4px;
+  font-size: 34px;
+  color: #123b6d;
+}
+
+.login-card p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.welcome-divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 35px 0 30px;
+  color: #172b4d;
+  font-size: 24px;
+}
+
+.welcome-divider span {
+  flex: 1;
+  height: 1px;
+  background: #dbe3ed;
+}
+
+.welcome-divider strong {
+  white-space: nowrap;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #26364d;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  height: 52px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border: 1px solid #d5deea;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f2937;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2f7de1;
+  box-shadow: 0 0 0 3px rgba(47, 125, 225, 0.12);
+}
+
+.login-card button {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #1469d7, #2787f0);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-card button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(20, 105, 215, 0.25);
+}
+
+.login-card > a {
+  display: inline-block;
+  margin-top: 22px;
+  color: #1769d1;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.login-card > a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .login-page {
+    flex-direction: column;
+  }
+
+  .corporate-panel,
+  .login-panel {
+    width: 100%;
+  }
+
+  .corporate-panel {
+    min-height: 420px;
+  }
+
+  .corporate-overlay {
+    padding: 40px;
+  }
+
+  .corporate-content h2 {
+    font-size: 36px;
+  }
+
+  .corporate-features {
+    margin-top: 35px;
+  }
+
+  .login-panel {
+    min-height: auto;
+    padding: 50px 25px;
+  }
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  padding-right: 70px;
+}
+
+.login-card .password-wrapper .password-toggle {
+  position: absolute !important;
+  right: 12px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 4px 6px !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 4px !important;
+  background: transparent !important;
+  color: #1769d1 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+.login-card .password-wrapper .password-toggle:hover {
+  transform: translateY(-50%) !important;
+  background: transparent !important;
+  color: #0f56b0 !important;
+  box-shadow: none !important;
+}
+
+/* Password Change Modal */
+
+.password-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(4, 35, 72, 0.65);
+}
+
+.password-modal {
+  width: 100%;
+  max-width: 430px;
+  padding: 35px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.password-modal h2 {
+  margin: 0 0 10px;
+  color: #123b6d;
+  font-size: 24px;
+}
+
+.password-modal p {
+  margin: 0 0 25px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.password-modal label {
+  display: block;
+  margin-bottom: 8px;
+  color: #26364d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.password-modal input {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 20px;
+  padding: 0 14px;
+  box-sizing: border-box;
+  border: 1px solid #d5deea;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.password-modal input:focus {
+  outline: none;
+  border-color: #2f7de1;
+  box-shadow: 0 0 0 3px rgba(47, 125, 225, 0.12);
+}
+
+.password-modal button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #1469d7, #2787f0);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.password-modal button:hover {
+  box-shadow: 0 6px 16px rgba(20, 105, 215, 0.25);
+}

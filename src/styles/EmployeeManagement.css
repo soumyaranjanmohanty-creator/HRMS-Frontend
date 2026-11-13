@@ -1,0 +1,345 @@
+.employee-management {
+  width: 100%;
+}
+
+.employee-management .page-header {
+  margin-bottom: 24px;
+}
+
+.employee-management .page-header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.employee-management .page-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.employee-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+  padding: 4px;
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.employee-tabs button {
+  flex: 0 0 auto;
+  border: none;
+  background: transparent;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.employee-tabs button:hover {
+  color: #1e293b;
+}
+
+.employee-tabs button.active {
+  background: #ffffff;
+  color: #2563eb;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+}
+
+.employee-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.employee-section h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+.employee-table th {
+  background: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+}
+
+.employee-table td {
+  color: #334155;
+}
+
+.employee-table button {
+  border: none;
+  border-radius: 6px;
+  padding: 7px 14px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.employee-table button:hover {
+  background: #1d4ed8;
+}
+
+.employee-profile-card {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.employee-profile-card h3 {
+  margin: 0 0 16px;
+  font-size: 17px;
+  color: #1e293b;
+}
+
+.employee-profile-card p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+/* Employee Profile - Account Information */
+
+.employee-profile-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.employee-profile-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.employee-profile-card-header h3 {
+  margin: 0 0 6px;
+}
+
+.employee-profile-card-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.employee-profile-card-header button {
+  padding: 9px 18px;
+  border: 1px solid #2563eb;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.employee-profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.employee-profile-field {
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+}
+
+.employee-profile-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.employee-profile-input {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  border: 1px solid #dbe3ee;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+.employee-profile-input.locked {
+  background: #f8fafc;
+}
+
+.employee-profile-lock {
+  font-size: 14px;
+}
+
+.employee-profile-field input {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid #dbe3ee;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+.employee-status-display {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 7px;
+  background: #ecfdf5;
+  color: #047857;
+  font-weight: 600;
+}
+
+.employee-profile-save-area {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.employee-profile-save-area button {
+  padding: 11px 22px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Employee Profile Search */
+
+.employee-profile-search {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.employee-profile-search .form-group {
+  margin-bottom: 20px;
+}
+
+.employee-profile-search .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.employee-profile-search select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 14px;
+  outline: none;
+}
+
+.employee-profile-search select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+.employee-profile-search > button {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.employee-profile-search > button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.employee-success-notification {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 13px 16px;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.employee-success-notification span:first-child {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Employment Information - Department and Designation dropdowns */
+.employee-profile-field select {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #1f2937;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.employee-profile-field select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.employee-profile-field select:hover {
+  border-color: #93b4f5;
+}
+
+.employee-profile-field select option {
+  padding: 10px;
+  background-color: #ffffff;
+  color: #1f2937;
+}

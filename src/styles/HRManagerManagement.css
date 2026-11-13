@@ -1,0 +1,698 @@
+/* =========================================
+   HR MANAGER MANAGEMENT PAGE
+   ========================================= */
+
+.hr-manager-management {
+  padding: 32px;
+  min-height: 100%;
+  background: #f7f9fc;
+}
+
+.hr-manager-page-header {
+  margin-bottom: 24px;
+}
+
+.hr-manager-page-header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #172033;
+}
+
+.hr-manager-page-header p {
+  margin: 0;
+  color: #687386;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   TABS
+   ========================================= */
+
+.hr-manager-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 5px;
+  margin-bottom: 24px;
+  width: fit-content;
+  background: #edf1f7;
+  border-radius: 10px;
+}
+
+.hr-manager-tabs button {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #647084;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.hr-manager-tabs button:hover {
+  color: #172033;
+}
+
+.hr-manager-tabs button.active {
+  background: #ffffff;
+  color: #2563eb;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.1);
+}
+
+/* =========================================
+   MAIN SECTION
+   ========================================= */
+
+.hr-manager-card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.hr-manager-section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.hr-manager-card h2 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #172033;
+}
+
+.hr-manager-section-heading p {
+  margin: 0;
+  color: #687386;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   CREATE MANAGER FORM
+   ========================================= */
+
+.hr-manager-form {
+  width: 100%;
+}
+
+.hr-manager-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+}
+
+.hr-manager-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.hr-manager-form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.hr-manager-form-group input,
+.hr-manager-form-group select {
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  padding: 0 13px;
+  border: 1px solid #d8dee8;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #172033;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.hr-manager-form-group input::placeholder {
+  color: #98a2b3;
+}
+
+.hr-manager-form-group input:focus,
+.hr-manager-form-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.hr-manager-form-group select:disabled {
+  background: #f8fafc;
+  color: #98a2b3;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   SUCCESS AND ERROR MESSAGES
+   ========================================= */
+
+.hr-manager-success,
+.hr-manager-error {
+  margin: 0 0 22px;
+  padding: 12px 14px;
+  border-radius: 7px;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.hr-manager-success {
+  background: #ecfdf3;
+  border: 1px solid #b7ebcd;
+  color: #067647;
+}
+
+.hr-manager-error {
+  background: #fef3f2;
+  border: 1px solid #fecdca;
+  color: #b42318;
+}
+
+/* =========================================
+   FORM ACTIONS
+   ========================================= */
+
+.hr-manager-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #edf0f4;
+}
+
+.hr-manager-form-actions button {
+  min-width: 180px;
+  min-height: 44px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hr-manager-form-actions button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.hr-manager-form-actions button:disabled {
+  background: #93b4f5;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   RESPONSIVE LAYOUT
+   ========================================= */
+
+@media (max-width: 768px) {
+  .hr-manager-management {
+    padding: 20px;
+  }
+
+  .hr-manager-card {
+    padding: 20px;
+  }
+
+  .hr-manager-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hr-manager-tabs {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+  }
+
+  .hr-manager-tabs button {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .hr-manager-form-actions {
+    justify-content: stretch;
+  }
+
+  .hr-manager-form-actions button {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   MANAGER LIST & PROFILES
+   ========================================= */
+
+.hr-manager-search {
+  margin-bottom: 20px;
+}
+
+.hr-manager-search input {
+  width: 100%;
+  max-width: 420px;
+  height: 42px;
+  box-sizing: border-box;
+  padding: 0 13px;
+  border: 1px solid #d8dee8;
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+}
+
+.hr-manager-search input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.hr-manager-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e5e9f0;
+  border-radius: 9px;
+}
+
+.hr-manager-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+
+.hr-manager-table th {
+  padding: 14px 12px;
+  background: #f5f7fb;
+  color: #344054;
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 1px solid #e5e9f0;
+}
+
+.hr-manager-table td {
+  padding: 14px 12px;
+  color: #475467;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.hr-manager-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.hr-manager-table tbody tr:hover {
+  background: #fafbff;
+}
+
+.hr-manager-view-button,
+.hr-manager-close-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hr-manager-view-button:hover,
+.hr-manager-close-button:hover {
+  background: #1d4ed8;
+}
+
+.hr-manager-view-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.hr-manager-status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: #f2f4f7;
+  color: #475467;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.hr-manager-status-active {
+  background: #dcfae6;
+  color: #067647;
+}
+
+.hr-manager-status-suspended {
+  background: #fee4e2;
+  color: #b42318;
+}
+
+.hr-manager-status-pending {
+  background: #fef0c7;
+  color: #93370d;
+}
+
+.hr-manager-table-empty {
+  padding: 28px !important;
+  text-align: center;
+  color: #687386 !important;
+}
+
+.hr-manager-empty {
+  padding: 16px 0;
+  color: #687386;
+}
+
+/* =========================================
+   MANAGER PROFILE
+   ========================================= */
+
+.hr-manager-profile {
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px solid #e5e9f0;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.hr-manager-profile-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.hr-manager-profile-header h3 {
+  margin: 0 0 5px;
+  color: #172033;
+  font-size: 21px;
+}
+
+.hr-manager-profile-header p {
+  margin: 0;
+  color: #687386;
+  font-size: 13px;
+}
+
+.hr-manager-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.hr-manager-profile-grid > div {
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #edf0f4;
+  border-radius: 7px;
+  background: #fafbfc;
+}
+
+.hr-manager-profile-grid label {
+  display: block;
+  margin-bottom: 7px;
+  color: #687386;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hr-manager-profile-grid p {
+  margin: 0;
+  color: #172033;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   RESPONSIVE LAYOUT
+   ========================================= */
+
+@media (max-width: 768px) {
+  .hr-manager-profile {
+    padding: 16px;
+  }
+
+  .hr-manager-profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   MANAGER PROFILE SECTIONS
+   ========================================= */
+
+.hr-manager-profile-section {
+  margin-top: 22px;
+  padding: 22px;
+  border: 1px solid #e5e9f0;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.03);
+}
+
+.hr-manager-profile-section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.hr-manager-profile-section-header h4 {
+  margin: 0 0 6px;
+  color: #172033;
+  font-size: 18px;
+}
+
+.hr-manager-profile-section-header p {
+  margin: 0;
+  color: #687386;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   EDIT BUTTON
+   ========================================= */
+
+.hr-manager-edit-button {
+  flex-shrink: 0;
+  min-width: 72px;
+  padding: 9px 17px;
+  border: 1px solid #2563eb;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.hr-manager-edit-button:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* =========================================
+   EDITABLE FIELDS
+   ========================================= */
+
+.hr-manager-edit-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.hr-manager-edit-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hr-manager-edit-field input,
+.hr-manager-edit-field select {
+  width: 100%;
+  min-height: 43px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #d8dee8;
+  border-radius: 7px;
+  outline: none;
+  background: #ffffff;
+  color: #172033;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.hr-manager-edit-field input:focus,
+.hr-manager-edit-field select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* =========================================
+   SAVE AND CANCEL BUTTONS
+   ========================================= */
+
+.hr-manager-edit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.hr-manager-save-button,
+.hr-manager-cancel-button {
+  min-height: 40px;
+  padding: 10px 17px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.hr-manager-save-button {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.hr-manager-save-button:hover {
+  background: #1d4ed8;
+}
+
+.hr-manager-cancel-button {
+  min-height: 40px;
+  padding: 10px 17px;
+  border: 1px solid #dc2626;
+  border-radius: 7px;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.hr-manager-cancel-button:hover:not(:disabled) {
+  border-color: #b91c1c;
+  background: #b91c1c;
+  color: #ffffff;
+}
+
+.hr-manager-save-button:disabled,
+.hr-manager-cancel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   PROFILE GRID
+   ========================================= */
+
+.hr-manager-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.hr-manager-profile-grid > div {
+  min-width: 0;
+}
+
+.hr-manager-profile-grid > div:not(.hr-manager-edit-field) {
+  padding: 13px;
+  border: 1px solid #edf0f4;
+  border-radius: 7px;
+  background: #fafbfc;
+}
+
+.hr-manager-profile-grid > div:not(.hr-manager-edit-field) label {
+  display: block;
+  margin-bottom: 7px;
+  color: #687386;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hr-manager-profile-grid > div:not(.hr-manager-edit-field) p {
+  margin: 0;
+  color: #172033;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 768px) {
+  .hr-manager-profile-section {
+    padding: 16px;
+  }
+
+  .hr-manager-profile-section-header {
+    gap: 10px;
+  }
+
+  .hr-manager-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hr-manager-edit-actions {
+    flex-direction: column;
+  }
+
+  .hr-manager-save-button,
+  .hr-manager-cancel-button {
+    width: 100%;
+  }
+}
+
+.hr-manager-profile-readonly {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 22px;
+}
+
+.hr-manager-profile-readonly span:last-child {
+  flex-shrink: 0;
+  font-size: 13px;
+}
+
+.hr-manager-profile-readonly {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 22px;
+}
+
+.hr-manager-profile-readonly span:last-child {
+  flex-shrink: 0;
+  font-size: 13px;
+}

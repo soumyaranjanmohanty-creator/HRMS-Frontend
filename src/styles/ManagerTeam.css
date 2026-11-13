@@ -1,0 +1,478 @@
+/* =========================
+   MANAGER TEAM PAGE
+========================= */
+
+.manager-team-page {
+  min-width: 0;
+  color: #1f2937;
+}
+
+/* Team content card */
+
+.manager-team-content {
+  margin-top: 24px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgb(15 23 42 / 4%);
+}
+
+/* Section heading */
+
+.manager-team-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.manager-team-heading h2 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.manager-team-heading p {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Employee count */
+
+.manager-team-count {
+  flex-shrink: 0;
+  padding: 9px 14px;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Search */
+
+.manager-team-search {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.manager-team-search label {
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.manager-team-search input {
+  width: 100%;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 0 14px;
+  color: #1f2937;
+  background: #ffffff;
+  border: 1px solid #dbe3ed;
+  border-radius: 9px;
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.manager-team-search input::placeholder {
+  color: #94a3b8;
+}
+
+.manager-team-search input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 12%);
+}
+
+/* Table wrapper */
+
+.manager-team-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e5eaf1;
+  border-radius: 11px;
+}
+
+/* Employee table */
+
+.manager-team-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.manager-team-table thead {
+  background: #f4f7fb;
+}
+
+.manager-team-table th {
+  padding: 15px 16px;
+  color: #64748b;
+  border-bottom: 1px solid #e5eaf1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.manager-team-table td {
+  padding: 15px 16px;
+  color: #475569;
+  border-bottom: 1px solid #edf1f6;
+  white-space: nowrap;
+}
+
+.manager-team-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.manager-team-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.manager-team-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Employee identity */
+
+.manager-team-employee {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.manager-team-employee strong {
+  color: #26364d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.manager-team-avatar {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #1d4ed8;
+  background: #dbeafe;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Employee role */
+
+.manager-team-role {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 9px;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* View profile button */
+
+.manager-team-view-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 12px;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.manager-team-view-button:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+}
+
+/* Loading, empty and error states */
+
+.manager-team-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 230px;
+  padding: 28px 20px;
+  text-align: center;
+  background: #f8fafc;
+  border: 1px dashed #dbe3ed;
+  border-radius: 12px;
+}
+
+.manager-team-state h3 {
+  margin: 12px 0 0;
+  color: #26364d;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.manager-team-state p {
+  max-width: 440px;
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.manager-team-empty-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  background: #dbeafe;
+  border-radius: 16px;
+  font-size: 25px;
+}
+
+/* Loading spinner */
+
+.manager-team-spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid #dbeafe;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: manager-team-spin 0.8s linear infinite;
+}
+
+@keyframes manager-team-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error state */
+
+.manager-team-error {
+  background: #fffafa;
+  border-color: #fecaca;
+}
+
+.manager-team-error h3 {
+  color: #b91c1c;
+}
+
+.manager-team-error button {
+  min-height: 38px;
+  margin-top: 18px;
+  padding: 0 16px;
+  color: #ffffff;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.manager-team-error button:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive layout */
+
+@media (max-width: 768px) {
+  .manager-team-content {
+    padding: 18px;
+  }
+
+  .manager-team-heading {
+    align-items: flex-start;
+  }
+
+  .manager-team-heading h2 {
+    font-size: 19px;
+  }
+
+  .manager-team-count {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .manager-team-table {
+    min-width: 760px;
+  }
+}
+
+@media (max-width: 480px) {
+  .manager-team-content {
+    padding: 14px;
+  }
+
+  .manager-team-heading {
+    flex-direction: column;
+  }
+
+  .manager-team-count {
+    align-self: flex-start;
+  }
+}
+
+/* ==============================
+   Employee Profile - Manager Team
+============================== */
+
+.manager-member-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 26px;
+  margin-bottom: 24px;
+  background: #ffffff;
+  border: 1px solid #e5eaf2;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.manager-member-profile-avatar {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  font-size: 28px;
+}
+
+.manager-member-profile-header h2 {
+  margin: 0 0 7px;
+  color: #172b4d;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.manager-member-profile-header p {
+  margin: 0 0 12px;
+  color: #64748b;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.manager-member-profile-id {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-left: auto;
+  padding: 14px 18px;
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.manager-member-profile-id span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.manager-member-profile-id strong {
+  color: #1d4ed8;
+  font-size: 18px;
+}
+
+.manager-member-profile-section {
+  padding: 25px;
+  margin-bottom: 22px;
+  background: #ffffff;
+  border: 1px solid #e5eaf2;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.manager-member-profile-section h3 {
+  margin: 0 0 22px;
+  padding-bottom: 15px;
+  color: #172b4d;
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 1px solid #e5eaf2;
+}
+
+.manager-member-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 28px;
+}
+
+.manager-member-profile-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.manager-member-profile-grid > div > span {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.manager-member-profile-grid > div > strong {
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+}
+
+.manager-member-profile-grid .manager-member-profile-full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 640px) {
+  .manager-member-profile-header {
+    flex-wrap: wrap;
+    padding: 18px;
+  }
+
+  .manager-member-profile-id {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .manager-member-profile-section {
+    padding: 18px;
+  }
+
+  .manager-member-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .manager-member-profile-grid .manager-member-profile-full {
+    grid-column: auto;
+  }
+}

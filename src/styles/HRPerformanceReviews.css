@@ -1,0 +1,497 @@
+/* =========================================
+   HR PERFORMANCE REVIEWS
+   Independent styles for HR Dashboard only
+   ========================================= */
+
+.hr-performance-page {
+  padding: 32px;
+  min-width: 0;
+}
+
+.hr-performance-page-header {
+  margin-bottom: 24px;
+}
+
+.hr-performance-page-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.hr-performance-page-header p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* Main Card */
+
+.hr-performance-card {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.hr-performance-card-header {
+  margin-bottom: 24px;
+}
+
+.hr-performance-card-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.hr-performance-card-header p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Two Tabs */
+
+.hr-performance-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 26px;
+  padding: 6px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.hr-performance-tabs button {
+  flex: 1;
+  min-height: 44px;
+  padding: 12px 18px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hr-performance-tabs button:hover {
+  color: #1d4ed8;
+}
+
+.hr-performance-tabs button.active {
+  background: #ffffff;
+  color: #2563eb;
+  border-color: #dbeafe;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.hr-performance-tabs button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Section Heading */
+
+.hr-performance-section-heading {
+  margin-bottom: 20px;
+}
+
+.hr-performance-section-heading h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.hr-performance-section-heading p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Form Grid */
+
+.hr-performance-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.hr-performance-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.hr-performance-form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Select, Input, Textarea */
+
+.hr-performance-form-group select,
+.hr-performance-form-group input,
+.hr-performance-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f2937;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.hr-performance-form-group select,
+.hr-performance-form-group input {
+  min-height: 44px;
+}
+
+.hr-performance-form-group textarea {
+  min-height: 110px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.hr-performance-form-group select:focus,
+.hr-performance-form-group input:focus,
+.hr-performance-form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.hr-performance-form-group select:disabled,
+.hr-performance-form-group input:disabled,
+.hr-performance-form-group textarea:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.hr-performance-helper {
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Comments Field */
+
+.hr-performance-comments {
+  grid-column: 1 / -1;
+}
+
+/* Action Buttons */
+
+.hr-performance-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.hr-performance-primary-button,
+.hr-performance-cancel-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.hr-performance-primary-button {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.hr-performance-primary-button:hover:not(:disabled) {
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+}
+
+.hr-performance-primary-button:disabled {
+  border-color: #9ca3af;
+  background: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Cancel Button */
+
+.hr-performance-cancel-button {
+  border: 1px solid #dc2626;
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.hr-performance-cancel-button:hover:not(:disabled) {
+  border-color: #b91c1c;
+  background: #b91c1c;
+}
+
+.hr-performance-cancel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Notifications */
+
+.hr-performance-success,
+.hr-performance-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.hr-performance-success {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #047857;
+}
+
+.hr-performance-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+/* Loading */
+
+.hr-performance-loading {
+  margin-top: 24px;
+  padding: 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Give Review Form */
+
+.hr-performance-review-form {
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  background: #f8fbff;
+}
+
+.hr-performance-review-form form {
+  margin: 0;
+}
+
+.hr-performance-review-form .hr-performance-actions {
+  margin-top: 22px;
+}
+
+.hr-performance-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.hr-performance-details-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.hr-performance-details-header p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Review History */
+
+.hr-performance-details {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.hr-performance-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Table */
+
+.hr-performance-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.hr-performance-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+}
+
+.hr-performance-table th,
+.hr-performance-table td {
+  padding: 13px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.hr-performance-table th {
+  background: #f9fafb;
+  color: #374151;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.hr-performance-table td {
+  color: #4b5563;
+  vertical-align: top;
+}
+
+.hr-performance-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.hr-performance-comments-cell {
+  max-width: 320px;
+  min-width: 180px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Rating */
+
+.hr-performance-rating {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Empty State */
+
+.hr-performance-empty {
+  margin-top: 28px;
+  padding: 32px 20px;
+  text-align: center;
+  border: 1px dashed #d1d5db;
+  border-radius: 10px;
+  background: #f9fafb;
+}
+
+.hr-performance-empty h3 {
+  margin: 0;
+  font-size: 17px;
+  color: #374151;
+}
+
+.hr-performance-empty p {
+  margin: 7px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .hr-performance-page {
+    padding: 24px;
+  }
+
+  .hr-performance-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hr-performance-comments {
+    grid-column: auto;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .hr-performance-page {
+    padding: 16px;
+  }
+
+  .hr-performance-page-header h1 {
+    font-size: 25px;
+  }
+
+  .hr-performance-card {
+    padding: 18px;
+  }
+
+  .hr-performance-tabs {
+    gap: 5px;
+    padding: 4px;
+  }
+
+  .hr-performance-tabs button {
+    padding: 11px 8px;
+    font-size: 13px;
+  }
+
+  .hr-performance-review-form {
+    padding: 16px;
+  }
+
+  .hr-performance-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hr-performance-actions button {
+    width: 100%;
+  }
+
+  .hr-performance-count {
+    font-size: 12px;
+  }
+}
